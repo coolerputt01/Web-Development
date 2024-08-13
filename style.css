@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: none;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: ease;
+    animation: 5s change linear infinite;
+    overflow-x: hidden;
+}
+@keyframes change {
+    0%{
+        background-color: rgb(255, 60, 60);
+    }
+    25%{
+        background-color: pink;
+    }
+    50%{
+        background-color: rgb(88, 88, 255);
+    }
+    75%{
+        background-color: lime;
+    }
+    100%{
+        background-color: yellow;
+    }
+}
+.heading{
+    width:100%;
+    background-color: black;
+    color:white;
+    font-size:2em;
+    text-align:center;
+    height:2em;
+}
+.game{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width:760px;
+    z-index:1;
+}
+.button{
+    background-color: rgb(77, 77, 6);
+    color:white;
+    width:10em;
+    height:9em;
+    border-radius:3px;
+    margin:20px;
+    top: -80%;
+    left:-200%;
+    transform:translate(200%,80%);
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.356) 10px 8px;
+    z-index:1;
+}
+.text{
+    top: 25%;
+    left:-35%;
+    transform:translate(35%,-25%);
+}
+.button:hover{
+    box-shadow: rgb(0, 0, 0) 10px 8px;
+    scale:0.9;
+    transition: ease;
+    cursor: pointer;
+    background-color: rgb(214, 214, 21);
+    color:rgb(128, 128, 128);
+}
+.video{
+    z-index: 0;
+    left: -35%;
+    top:25%;
+    transform: translate(35%,-25%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.video.show{
+    opacity: 1;
+}
